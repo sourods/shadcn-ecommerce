@@ -12,12 +12,12 @@ import { useShoppingCart } from "@/providers/CartProvider"
 import { useEffect } from "react";
 
 export default function ShoppingCartModal() {
-  useEffect(() => console.log('display cart', shouldDisplayCart))
   const {
     cartCount,
     shouldDisplayCart,
     handleDisplayCart,
     cartDetails,
+    addItem,
     removeItem,
     totalPrice,
   } = useShoppingCart();
@@ -62,6 +62,13 @@ export default function ShoppingCartModal() {
                           <p className="text-gray-500">QTY: {entry.quantity}</p>
 
                           <div className="flex">
+                            <button
+                              type="button"
+                              onClick={() => addItem(entry)}
+                              className="font-medium text-primary hover:text-primary/80 mr-1"
+                            >
+                              Add
+                            </button>
                             <button
                               type="button"
                               onClick={() => removeItem(entry._id)}

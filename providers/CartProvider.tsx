@@ -47,7 +47,7 @@ export default function CartProvider({ children, successUrl, cancelUrl, currency
     const handleDisplayCart = () => setDisplayCart(!displayCart)
 
     useEffect(() => {
-        if (!displayCart) {
+        if (!displayCart && cartState.items.length) {
             setDisplayCart(true)
         }
     }, [cartState.items])
