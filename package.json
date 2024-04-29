@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "npx json-server ./__mock__/server.js"
+    "json-server": "npx json-server -p 3003 ./__mock__/server.js"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -19,8 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7",
-    "use-shopping-cart": "^3.1.8"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,32 +1,20 @@
 import Link from "next/link";
-import { simplifiedProduct } from "../interface";
-import { client } from "../lib/sanity";
+
 import Image from "next/image";
+import { request } from "@/lib/utils";
+import { Products } from "@/types/product";
+import { useShoppingCart } from "@/providers/CartProvider";
 
-async function getData(cateogry: string) {
-  const query = `*[_type == "product" && category->name == "${cateogry}"] {
-        _id,
-          "imageUrl": images[0].asset->url,
-          price,
-          name,
-          "slug": slug.current,
-          "categoryName": category->name
-      }`;
-
-  const data = await client.fetch(query);
-
-  return data;
+interface Props {
+  params: { category: string };
 }
 
-export const dynamic = "force-dynamic";
-
+const fetchProducts = async (category: string) => await request(`http://localhost:3003/products?category=${category}`)
+ 
 export default async function CategoryPage({
   params,
-}: {
-  params: { category: string };
-}) {
-  const data: simplifiedProduct[] = await getData(params.category);
-
+}: Props) {
+  const products: Products = await fetchProducts(params.category);
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
@@ -37,11 +25,11 @@ export default async function CategoryPage({
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {data.map((product) => (
+          {products.map((product) => (
             <div key={product._id} className="group relative">
               <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
                 <Image
-                  src={product.imageUrl}
+                  src={product.images[0]}
                   alt="Product image"
                   className="w-full h-full object-cover object-center lg:h-full lg:w-full"
                   width={300}
@@ -61,7 +49,7 @@ export default async function CategoryPage({
                   </p>
                 </div>
                 <p className="text-sm font-medium text-gray-900">
-                  ${product.price}
+                  {product.price}
                 </p>
               </div>
             </div>

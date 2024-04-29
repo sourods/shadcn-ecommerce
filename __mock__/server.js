@@ -1,7 +1,7 @@
 const data = require('./data')
 
 const getFeaturedProducts = () => {
-    const middleIndex = Math.floor(data.length / 2);
+    const middleIndex = Math.floor(data.length / 2)
     const productsGroup1 = data.slice(0, middleIndex)
     const productsGroup2 = data.slice(middleIndex)
     return [
@@ -14,4 +14,5 @@ module.exports = () => ({
     products: data,
     categories: [...new Set(data.map(product => product.categoryName))],
     featuredProducts: getFeaturedProducts(),
+    newestProducts: data.slice(data.length - 5, data.length - 1),
 })
