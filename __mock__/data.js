@@ -1,4 +1,5 @@
-module.exports =
+module.exports = {
+    products: 
     [
         {
             "_id": "01HVMS7GF248GS7QFJESJCRZ1G",
@@ -390,4 +391,17 @@ module.exports =
             "categoryName": "Music",
             "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum."
         }
+    ],
+    featuredProducts: [
+        {
+            images: [
+                'https://images.unsplash.com/photo-1604272490759-7c465473958a'
+            ]
+        },
+        {
+            images: [
+                'https://images.unsplash.com/photo-1600950207944-0d63e8edbc3f'
+            ]
+        }
     ]
+}

@@ -16,7 +16,7 @@ export default function NotFound() {
         <CardHeader className="text-center">
           <CardTitle className="lg:text-7xl text-4xl">Not Found</CardTitle>
           <CardDescription>
-            The page you’re looking for doesn’t exist.
+            The page you're looking for doesn't exist.
           </CardDescription>
         </CardHeader>
         <CardFooter className="flex justify-center">

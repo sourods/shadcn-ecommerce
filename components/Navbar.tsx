@@ -10,7 +10,6 @@ const links = [
   { name: "Home", href: "/" },
   { name: "Men", href: "/Men" },
   { name: "Women", href: "/Women" },
-  { name: "Teens", href: "/Teens" },
 ];
 
 export default function Navbar() {
@@ -49,7 +48,7 @@ export default function Navbar() {
 
         <div className="flex divide-x border-r sm:border-l">
           <Button
-            variant={"outline"}
+            variant="outline"
             onClick={() => handleDisplayCart()}
             className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
           >
