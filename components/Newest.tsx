@@ -39,7 +39,7 @@ const Newest = ({ newestProducts }: Props) => (
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <Link href={`/product/${product.slug}`}>
+                    <Link href={`/product/${product.slug}/${product._id}`}>
                       {product.name}
                     </Link>
                   </h3>

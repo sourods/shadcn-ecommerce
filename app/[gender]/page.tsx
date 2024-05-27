@@ -1,26 +1,23 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { request } from "@/lib/utils";
+import { getData } from "@/lib/utils";
 import { Products } from "@/types/product";
-import { useShoppingCart } from "@/providers/CartProvider";
 
 interface Props {
-  params: { category: string };
+  params: { gender: string };
 }
 
-const fetchProducts = async (category: string) => await request(`http://localhost:3003/products?category=${category}`)
- 
 export default async function CategoryPage({
   params,
 }: Props) {
-  const products: Products = await fetchProducts(params.category);
+  const products = await getData<Products>(`/products?gender=${params.gender}`)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Products for {params.category}
+            Our Products for {params.gender}
           </h2>
         </div>
 

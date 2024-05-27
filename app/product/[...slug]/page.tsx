@@ -1,23 +1,26 @@
 
 import ImageGallery from "../components/ImageGallery";
-import { request } from "@/lib/utils";
+import { getData } from "@/lib/utils";
 import Offer from "../components/Offer";
+import { Products } from "@/types/product";
 
 interface Props {
-  params: { slug: string }
+  params: {
+    slug: string
+    id: string
+  }
 }
 
-const fetchProduct = async (slug: string) => await request(`http://localhost:3003/products?slug=${slug}`)
-export default async function ProductPge({
+export default async function ProductPage({
   params,
 }: Props) {
-  const [product] = await fetchProduct(params.slug)
+  const { slug: [name, id] } = params
+  const [product] = await getData<Products>(`/products?slug=${name}&_id${id}`)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           <ImageGallery images={product.images} />
-
           <div className="md:py-8">
             <div className="mb-2 md:mb-3">
               <span className="mb-0.5 inline-block text-gray-500">
