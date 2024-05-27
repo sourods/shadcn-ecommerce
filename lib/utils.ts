@@ -1,28 +1,29 @@
-import { Products } from "@/types/product"
 import { type ClassValue, clsx } from "clsx"
-import { redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import { twMerge } from "tailwind-merge"
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+const { API_BASE_URL, API_PORT } = process.env
+
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs))
+
+export async function getData<T>(path: string) {
+  const data = await request(path)
+  if (data !== undefined) {
+    return data as T
+  }
+  return notFound()
 }
 
-export async function request(endpoint: string) {
+async function request(path: string) {
   try {
-    const response = await fetch(endpoint)
+    const response = await fetch(`${API_BASE_URL}:${API_PORT}${path}`)
     if (!response.ok) {
-      if (response.status === 404) {
-        return redirect('error/not-found')
-      }
-      return redirect('error/unavaible')
+      return undefined
     }
-    const data: Products = await response.json()
-    if (!data.length) {
-      return redirect('error/not-found')
-    }
+    const data = await response.json()
     return data
   } catch (error) {
-    return redirect('error/unavaible')
+    return undefined
   }
 }
 
