@@ -9,8 +9,22 @@ import { ReactNode } from "react";
 interface Props extends Omit<Cart, 'items'> {
     children: ReactNode
 }
+type CountryCurrency = Pick<Props, 'currency' | 'location'>
+interface CartContextValue {
+    addItem: (product: Product) => void,
+    handleDisplayCart: () => void,
+    removeItem: (productId: Product['_id']) => void
+    cartDetails: Cart['items']
+    setCountryCurrency: ({ currency, location }: CountryCurrency) => void
+    totalPrice: string
+    shouldDisplayCart: boolean
+    formatCurrency: (price: number) => string
+    currency: string
+}
+
 
 const CartContext = createContext({})
+
 
 export default function CartProvider({ children, successUrl, cancelUrl, currency, location }: Props) {
     const [cartState, setCartState] = useState<Cart>({
@@ -21,7 +35,7 @@ export default function CartProvider({ children, successUrl, cancelUrl, currency
         items: [],
     })
     const [displayCart, setDisplayCart] = useState(false)
-    const totalPrice = useMemo(() => cartState.items.reduce((totalPrice, item) => totalPrice + item.price, 0), [cartState.items])
+    const totalPrice = useMemo(() => cartState.items.reduce((totalPrice, item) => totalPrice + item.price * item.quantity, 0), [cartState.items])
     const cartDetails = useMemo(() => cartState.items.map(item => ({ ...item, price: setCurrencyFormat(location, currency, item.price) })), [cartState.items])
 
     const addItem = (product: Product) => {
@@ -57,9 +71,12 @@ export default function CartProvider({ children, successUrl, cancelUrl, currency
         handleDisplayCart,
         removeItem,
         cartDetails,
+        setCountryCurrency: ({ currency, location }: CountryCurrency) =>
+            setCartState((currentCartState) => ({ ...currentCartState, currency, location })),
         totalPrice: setCurrencyFormat(location, currency, totalPrice),
         shouldDisplayCart: displayCart,
-        formatCurrency: (price: number) => setCurrencyFormat(location, currency, price)
+        formatCurrency: (price: number) => setCurrencyFormat(location, currency, price),
+        currency: cartState.currency
     }
     return (
         <CartContext.Provider value={cart}>
@@ -71,7 +88,7 @@ export default function CartProvider({ children, successUrl, cancelUrl, currency
 export function useShoppingCart() {
     const cartContextValue = useContext(CartContext)
     if (!Object.keys(cartContextValue).length) {
-        throw new Error('CartProvider must be provided');
+        throw Error('CartProvider must be provided');
     }
-    return cartContextValue;
+    return cartContextValue as CartContextValue;
 }
