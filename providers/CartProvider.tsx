@@ -9,13 +9,13 @@ import { ReactNode } from "react";
 interface Props extends Omit<Cart, 'items'> {
     children: ReactNode
 }
-type CountryCurrency = Pick<Props, 'currency' | 'location'>
+type Currency = Pick<Props, 'currency' | 'location'>
 interface CartContextValue {
     addItem: (product: Product) => void,
     handleDisplayCart: () => void,
     removeItem: (productId: Product['_id']) => void
     cartDetails: Cart['items']
-    setCountryCurrency: ({ currency, location }: CountryCurrency) => void
+    setCurrency: ({ currency, location }: Currency) => void
     totalPrice: string
     shouldDisplayCart: boolean
     formatCurrency: (price: number) => string
@@ -71,7 +71,7 @@ export default function CartProvider({ children, successUrl, cancelUrl, currency
         handleDisplayCart,
         removeItem,
         cartDetails,
-        setCountryCurrency: ({ currency, location }: CountryCurrency) =>
+        setCurrency: ({ currency, location }: Currency) =>
             setCartState((currentCartState) => ({ ...currentCartState, currency, location })),
         totalPrice: setCurrencyFormat(location, currency, totalPrice),
         shouldDisplayCart: displayCart,
