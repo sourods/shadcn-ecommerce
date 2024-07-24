@@ -5,19 +5,19 @@ import { getData } from "@/lib/utils";
 import { Products } from "@/types/product";
 
 interface Props {
-  params: { gender: string };
+  params: { category: string };
 }
 
 export default async function CategoryPage({
-  params,
+  params: { category },
 }: Props) {
-  const products = await getData<Products>(`/products?gender=${params.gender}`)
+  const products = await getData<Products>(`/products?gender=${category}`)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Products for {params.gender}
+            Our Products for {category}
           </h2>
         </div>
 
@@ -37,7 +37,7 @@ export default async function CategoryPage({
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <Link href={`/product/${product.slug}`}>
+                    <Link href={`/${category}/${product._id}`}>
                       {product.name}
                     </Link>
                   </h3>

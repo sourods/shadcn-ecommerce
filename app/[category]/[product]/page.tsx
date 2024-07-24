@@ -1,21 +1,19 @@
 
-import ImageGallery from "../components/ImageGallery";
+import ImageGallery from "./components/ImageGallery";
 import { getData } from "@/lib/utils";
-import Offer from "../components/Offer";
+import Offer from "./components/Offer";
 import { Products } from "@/types/product";
 
 interface Props {
   params: {
-    slug: string
-    id: string
+    product: string
   }
 }
 
 export default async function ProductPage({
-  params,
+  params: { product: productId },
 }: Props) {
-  const { slug: [name, id] } = params
-  const [product] = await getData<Products>(`/products?slug=${name}&_id${id}`)
+  const [product] = await getData<Products>(`/products?_id=${productId}`)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
