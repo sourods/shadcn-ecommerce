@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ShoppingBag, User, Menu } from "lucide-react";
 import { useShoppingCart } from "@/providers/CartProvider";
 import CurrencyModal from "./CurrencyDialog";
@@ -11,6 +11,7 @@ import NavbarButton from "./NavbarButton";
 import MobileNavbar from "./MobileNavbar";
 
 export default function Navbar() {
+  const router = useRouter()
   const pathname = usePathname();
   const { handleDisplayCart, currency } = useShoppingCart();
   const [displayCurrencyDialog, setDisplayCurrencyDialog] = useState(false)
@@ -51,7 +52,7 @@ export default function Navbar() {
           </nav>
 
           <div className="flex flex-row">
-            <NavbarButton label="Account" className="hidden sm:flex" onClick={handleDisplayCart}>
+            <NavbarButton label="Account" className="hidden sm:flex" onClick={() => router.push('/login')}>
               <User />
             </NavbarButton>
             <NavbarButton label="Cart" onClick={handleDisplayCart}>
