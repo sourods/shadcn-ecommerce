@@ -22,7 +22,6 @@ interface Props {
     onClose: () => void
 }
 
-
 const CurrencyDialog = ({ display, onClose }: Props) => {
     const { setCurrency } = useShoppingCart()
     const onCurrencyChange = (value: string) => {
@@ -40,7 +39,7 @@ const CurrencyDialog = ({ display, onClose }: Props) => {
                 </DialogHeader>
                 <Select onValueChange={onCurrencyChange}>
                     <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Select a fruit" />
+                        <SelectValue placeholder="Select your currency" />
                     </SelectTrigger>
                     <SelectContent>
                         <SelectGroup>
