@@ -32,3 +32,8 @@ export const setCurrencyFormat = (location: string, currency: string, value: num
     style: 'currency',
     currency,
   }).format(value)
+
+export function isValidDate(dateString: string): boolean {
+  const date = new Date(dateString);
+  return !isNaN(date.getTime()) && date.getFullYear() > 0;
+}

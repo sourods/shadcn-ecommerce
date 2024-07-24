@@ -20,7 +20,7 @@ export default function LoginPage() {
             Email address
           </Label>
           <div className="mt-1">
-            <Input id="email" type="email" placeholder="you@example.com" required />
+            <Input type="email" placeholder="you@example.com" required />
           </div>
         </div>
         <div>
@@ -28,7 +28,7 @@ export default function LoginPage() {
             Password
           </Label>
           <div className="mt-1">
-            <Input id="password" type="password" placeholder="Enter your password" required />
+            <Input type="password" placeholder="Enter your password" required />
           </div>
         </div>
         <div className="flex items-center justify-between">
@@ -39,7 +39,6 @@ export default function LoginPage() {
           <Link
             href="#"
             className="text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-500 dark:hover:text-primary-400"
-            prefetch={false}
           >
             Forgot your password?
           </Link>
