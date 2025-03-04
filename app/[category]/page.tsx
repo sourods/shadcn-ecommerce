@@ -11,7 +11,7 @@ interface Props {
 export default async function CategoryPage({
   params: { category },
 }: Props) {
-  const products = await getData<Products>(`/products?gender=${category}`)
+  const products = await getData<Products>(`/products?category=${category}`)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">

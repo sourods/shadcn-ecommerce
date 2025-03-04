@@ -1,7 +1,7 @@
 
 const categories = [
     {
-        gender: 'women',
+        category: 'women',
         type: 'shirts',
         items: [
             'https://images.unsplash.com/photo-1616006897093-5e4635c0de35',
@@ -13,7 +13,7 @@ const categories = [
         ]
     },
     {
-        gender: 'women',
+        category: 'women',
         type: 'jeans',
         items: [
             'https://images.unsplash.com/photo-1578693082747-50c396cacd81',
@@ -23,14 +23,14 @@ const categories = [
         ]
     },
     {
-        gender: 'women',
+        category: 'women',
         type: 'trousers',
         items: [
             'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1',
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'shirts',
         items: [
             'https://images.unsplash.com/photo-1618517351616-38fb9c5210c6',
@@ -41,7 +41,7 @@ const categories = [
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'jeans',
         items: [
             'https://images.unsplash.com/photo-1582552938357-32b906df40cb',
@@ -49,7 +49,7 @@ const categories = [
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'trousers',
         items: [
             'https://images.unsplash.com/photo-1473966968600-fa801b869a1a',
@@ -57,14 +57,14 @@ const categories = [
         ]
     },
     {
-        gender: 'unisex',
+        category: 'unisex',
         type: 'jeans',
         items: [
             'https://plus.unsplash.com/premium_photo-1690820318676-1609f3cc3d8f',
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'hoodies',
         items: [
             'https://images.unsplash.com/photo-1604638823130-f69b793242e4',
@@ -77,7 +77,7 @@ const categories = [
         ]
     },
     {
-        gender: 'women',
+        category: 'women',
         type: 'hoodies',
         items: [
             'https://images.unsplash.com/photo-1633292750937-120a94f5c2bb',
@@ -87,7 +87,7 @@ const categories = [
         ]
     },
     {
-        gender: 'women',
+        category: 'women',
         type: 'shorts',
         items: [
             'https://images.unsplash.com/photo-1543331707-30e9129663e0',
@@ -99,7 +99,7 @@ const categories = [
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'shorts',
         items: [
             'https://images.unsplash.com/photo-1522098427438-f10a7755aa86',
@@ -110,7 +110,7 @@ const categories = [
         ]
     },
     {
-        gender: 'men',
+        category: 'men',
         type: 'shoes',
         items: [
             'https://images.unsplash.com/photo-1491553895911-0055eca6402d',
@@ -123,7 +123,7 @@ const categories = [
         ]
     },
     {
-        gender: 'women',
+        category: 'women',
         type: 'shoes',
         items: [
             'https://images.unsplash.com/photo-1605732440685-d0654d81aa30',
@@ -147,7 +147,7 @@ const products = categories.reduce((accumulator, categorie) => [...accumulator, 
     _id: generateUniqueId(),
     name: `${categorie.gender} ${categorie.type}`,
     slug: `${categorie.gender}-${categorie.type}`,
-    gender: categorie.gender,
+    category: categorie.gender,
     type: categorie.type,
     price: (Math.random() * (70 - 30) + 30).toFixed(2),
     images: [

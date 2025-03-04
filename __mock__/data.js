@@ -5,7 +5,7 @@ module.exports = {
                 "_id": "1715191486947k3s",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 39.06,
                 "images": [
@@ -19,7 +19,7 @@ module.exports = {
                 "_id": "1715191486947inx",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 45.92,
                 "images": [
@@ -33,7 +33,7 @@ module.exports = {
                 "_id": "17151914869473oe",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 54.23,
                 "images": [
@@ -47,7 +47,7 @@ module.exports = {
                 "_id": "1715191486947jsd",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 43.78,
                 "images": [
@@ -61,7 +61,7 @@ module.exports = {
                 "_id": "17151914869484jl",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 39.32,
                 "images": [
@@ -75,7 +75,7 @@ module.exports = {
                 "_id": "1715191486948iuz",
                 "name": "women shirts",
                 "slug": "women-shirts",
-                "gender": "women",
+                "category": "women",
                 "type": "shirts",
                 "price": 38.16,
                 "images": [
@@ -89,7 +89,7 @@ module.exports = {
                 "_id": "1715191486948631",
                 "name": "women jeans",
                 "slug": "women-jeans",
-                "gender": "women",
+                "category": "women",
                 "type": "jeans",
                 "price": 65.81,
                 "images": [
@@ -103,7 +103,7 @@ module.exports = {
                 "_id": "1715191486948d6r",
                 "name": "women jeans",
                 "slug": "women-jeans",
-                "gender": "women",
+                "category": "women",
                 "type": "jeans",
                 "price": 60.80,
                 "images": [
@@ -117,7 +117,7 @@ module.exports = {
                 "_id": "1715191486948gxk",
                 "name": "women jeans",
                 "slug": "women-jeans",
-                "gender": "women",
+                "category": "women",
                 "type": "jeans",
                 "price": 54.98,
                 "images": [
@@ -131,7 +131,7 @@ module.exports = {
                 "_id": "1715191486948miy",
                 "name": "women jeans",
                 "slug": "women-jeans",
-                "gender": "women",
+                "category": "women",
                 "type": "jeans",
                 "price": 46.39,
                 "images": [
@@ -145,7 +145,7 @@ module.exports = {
                 "_id": "17151914869481jn",
                 "name": "women trousers",
                 "slug": "women-trousers",
-                "gender": "women",
+                "category": "women",
                 "type": "trousers",
                 "price": 48.42,
                 "images": [
@@ -159,7 +159,7 @@ module.exports = {
                 "_id": "1715191486948irg",
                 "name": "men shirts",
                 "slug": "men-shirts",
-                "gender": "men",
+                "category": "men",
                 "type": "shirts",
                 "price": 32.68,
                 "images": [
@@ -173,7 +173,7 @@ module.exports = {
                 "_id": "1715191486948krx",
                 "name": "men shirts",
                 "slug": "men-shirts",
-                "gender": "men",
+                "category": "men",
                 "type": "shirts",
                 "price": 42.49,
                 "images": [
@@ -187,7 +187,7 @@ module.exports = {
                 "_id": "1715191486948gm0",
                 "name": "men shirts",
                 "slug": "men-shirts",
-                "gender": "men",
+                "category": "men",
                 "type": "shirts",
                 "price": 37.25,
                 "images": [
@@ -201,7 +201,7 @@ module.exports = {
                 "_id": "1715191486948fcl",
                 "name": "men shirts",
                 "slug": "men-shirts",
-                "gender": "men",
+                "category": "men",
                 "type": "shirts",
                 "price": 50.71,
                 "images": [
@@ -215,7 +215,7 @@ module.exports = {
                 "_id": "1715191486948ve1",
                 "name": "men shirts",
                 "slug": "men-shirts",
-                "gender": "men",
+                "category": "men",
                 "type": "shirts",
                 "price": 56.48,
                 "images": [
@@ -229,7 +229,7 @@ module.exports = {
                 "_id": "1715191486948qar",
                 "name": "men jeans",
                 "slug": "men-jeans",
-                "gender": "men",
+                "category": "men",
                 "type": "jeans",
                 "price": 69.79,
                 "images": [
@@ -243,7 +243,7 @@ module.exports = {
                 "_id": "1715191486948vdo",
                 "name": "men jeans",
                 "slug": "men-jeans",
-                "gender": "men",
+                "category": "men",
                 "type": "jeans",
                 "price": 58.20,
                 "images": [
@@ -257,7 +257,7 @@ module.exports = {
                 "_id": "1715191486948brr",
                 "name": "men trousers",
                 "slug": "men-trousers",
-                "gender": "men",
+                "category": "men",
                 "type": "trousers",
                 "price": 47.54,
                 "images": [
@@ -271,7 +271,7 @@ module.exports = {
                 "_id": "17151914869486b9",
                 "name": "men trousers",
                 "slug": "men-trousers",
-                "gender": "men",
+                "category": "men",
                 "type": "trousers",
                 "price": 64.32,
                 "images": [
@@ -285,7 +285,7 @@ module.exports = {
                 "_id": "1715191486948cg9",
                 "name": "unisex jeans",
                 "slug": "unisex-jeans",
-                "gender": "unisex",
+                "category": "unisex",
                 "type": "jeans",
                 "price": 63.60,
                 "images": [
@@ -299,7 +299,7 @@ module.exports = {
                 "_id": "1715191486948732",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 66.55,
                 "images": [
@@ -313,7 +313,7 @@ module.exports = {
                 "_id": "171519148694880g",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 54.65,
                 "images": [
@@ -327,7 +327,7 @@ module.exports = {
                 "_id": "1715191486948foa",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 61.01,
                 "images": [
@@ -341,7 +341,7 @@ module.exports = {
                 "_id": "1715191486948jpg",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 47.51,
                 "images": [
@@ -355,7 +355,7 @@ module.exports = {
                 "_id": "1715191486948763",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 56.35,
                 "images": [
@@ -369,7 +369,7 @@ module.exports = {
                 "_id": "171519148694877h",
                 "name": "men hoodies",
                 "slug": "men-hoodies",
-                "gender": "men",
+                "category": "men",
                 "type": "hoodies",
                 "price": 62.28,
                 "images": [
@@ -383,7 +383,7 @@ module.exports = {
                 "_id": "1715191486948m1q",
                 "name": "women hoodies",
                 "slug": "women-hoodies",
-                "gender": "women",
+                "category": "women",
                 "type": "hoodies",
                 "price": 52.63,
                 "images": [
@@ -397,7 +397,7 @@ module.exports = {
                 "_id": "1715191486948erx",
                 "name": "women hoodies",
                 "slug": "women-hoodies",
-                "gender": "women",
+                "category": "women",
                 "type": "hoodies",
                 "price": 46.26,
                 "images": [
@@ -411,7 +411,7 @@ module.exports = {
                 "_id": "171519148694837e",
                 "name": "women hoodies",
                 "slug": "women-hoodies",
-                "gender": "women",
+                "category": "women",
                 "type": "hoodies",
                 "price": 64.50,
                 "images": [
@@ -425,7 +425,7 @@ module.exports = {
                 "_id": "1715191486948bzy",
                 "name": "women hoodies",
                 "slug": "women-hoodies",
-                "gender": "women",
+                "category": "women",
                 "type": "hoodies",
                 "price": 68.23,
                 "images": [
@@ -439,7 +439,7 @@ module.exports = {
                 "_id": "1715191486948ad3",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 49.47,
                 "images": [
@@ -453,7 +453,7 @@ module.exports = {
                 "_id": "1715191486948ls2",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 53.82,
                 "images": [
@@ -467,7 +467,7 @@ module.exports = {
                 "_id": "1715191486948sf0",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 45.71,
                 "images": [
@@ -481,7 +481,7 @@ module.exports = {
                 "_id": "1715191486948eqd",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 60.34,
                 "images": [
@@ -495,7 +495,7 @@ module.exports = {
                 "_id": "1715191486948k2c",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 41.60,
                 "images": [
@@ -509,7 +509,7 @@ module.exports = {
                 "_id": "1715191486948jh7",
                 "name": "women shorts",
                 "slug": "women-shorts",
-                "gender": "women",
+                "category": "women",
                 "type": "shorts",
                 "price": 30.47,
                 "images": [
@@ -523,7 +523,7 @@ module.exports = {
                 "_id": "1715191486948e8t",
                 "name": "men shorts",
                 "slug": "men-shorts",
-                "gender": "men",
+                "category": "men",
                 "type": "shorts",
                 "price": 36.96,
                 "images": [
@@ -537,7 +537,7 @@ module.exports = {
                 "_id": "1715191486948rat",
                 "name": "men shorts",
                 "slug": "men-shorts",
-                "gender": "men",
+                "category": "men",
                 "type": "shorts",
                 "price": 49.07,
                 "images": [
@@ -551,7 +551,7 @@ module.exports = {
                 "_id": "1715191486948zv8",
                 "name": "men shorts",
                 "slug": "men-shorts",
-                "gender": "men",
+                "category": "men",
                 "type": "shorts",
                 "price": 46.05,
                 "images": [
@@ -565,7 +565,7 @@ module.exports = {
                 "_id": "17151914869481ws",
                 "name": "men shorts",
                 "slug": "men-shorts",
-                "gender": "men",
+                "category": "men",
                 "type": "shorts",
                 "price": 48.05,
                 "images": [
@@ -579,7 +579,7 @@ module.exports = {
                 "_id": "1715191486948e73",
                 "name": "men shorts",
                 "slug": "men-shorts",
-                "gender": "men",
+                "category": "men",
                 "type": "shorts",
                 "price": 54.01,
                 "images": [
@@ -593,7 +593,7 @@ module.exports = {
                 "_id": "1715191486949rnp",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 61.41,
                 "images": [
@@ -607,7 +607,7 @@ module.exports = {
                 "_id": "1715191486949trq",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 41.74,
                 "images": [
@@ -621,7 +621,7 @@ module.exports = {
                 "_id": "17151914869497in",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 58.47,
                 "images": [
@@ -635,7 +635,7 @@ module.exports = {
                 "_id": "1715191486949xem",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 53.83,
                 "images": [
@@ -649,7 +649,7 @@ module.exports = {
                 "_id": "1715191486949at4",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 50.88,
                 "images": [
@@ -663,7 +663,7 @@ module.exports = {
                 "_id": "1715191486949las",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 39.48,
                 "images": [
@@ -677,7 +677,7 @@ module.exports = {
                 "_id": "1715191486949hnp",
                 "name": "men shoes",
                 "slug": "men-shoes",
-                "gender": "men",
+                "category": "men",
                 "type": "shoes",
                 "price": 55.92,
                 "images": [
@@ -691,7 +691,7 @@ module.exports = {
                 "_id": "1715191486949bqh",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 52.40,
                 "images": [
@@ -705,7 +705,7 @@ module.exports = {
                 "_id": "1715191486949qoe",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 44.22,
                 "images": [
@@ -719,7 +719,7 @@ module.exports = {
                 "_id": "17151914869491ij",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 48.40,
                 "images": [
@@ -733,7 +733,7 @@ module.exports = {
                 "_id": "1715191486949oj9",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 52.49,
                 "images": [
@@ -747,7 +747,7 @@ module.exports = {
                 "_id": "1715191486949gjd",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 50.83,
                 "images": [
@@ -761,7 +761,7 @@ module.exports = {
                 "_id": "171519148694982s",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 39.73,
                 "images": [
@@ -775,7 +775,7 @@ module.exports = {
                 "_id": "1715191486949y2l",
                 "name": "women shoes",
                 "slug": "women-shoes",
-                "gender": "women",
+                "category": "women",
                 "type": "shoes",
                 "price": 57.99,
                 "images": [
